@@ -1,0 +1,15 @@
+<div class='dot-bar-wrapper'>
+	<div class='container-fluid'>
+		<div class='year'>
+			<h4>{{ first_date }} &raquo;</h4>
+		</div>
+		<div class='dot-bar'>
+			{% for row in timeline %}
+			<a href ='#{{ row.uniqueID }}' class='dot {% if loop.first %} active {% endif %} {{ row.category }}' data-toggle="tooltip" title='{{ row.date_display }}: {{ row.headline }}'style='left:{{ row.date_place }}%'></a>
+			{% endfor %}
+		</div>
+		<div class='year'>
+			<h4>&laquo; {{ last_date }}</h4>
+		</div>
+	</div>
+</div>

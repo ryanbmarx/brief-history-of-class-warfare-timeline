@@ -1,0 +1,50 @@
+{% set ad_counter = 4 %}
+<div id='return-wrapper' class='visible-phone'>
+	<a href='#intro' class='return'>
+		<span class='icon-stack'>
+			<i class="icon-circle icon-4x icon-stack-base"></i>
+			<i class="icon-arrow-up icon-3x"></i>
+		</span>
+	</a>
+</div>
+{% for row in timeline[1:] %}
+	<hr>
+	<div id ='{{ row.uniqueID }}' class='timeline-wrapper {{ row.category }}'>
+		{% if row.photo and row.photo_type != 'mug' %}
+			{% if ad_counter >= 2 %}
+				{% set ad_counter = 0 %}
+				<div class='advert-wrapper right'>
+					<div class='advert' data-ad-type='cube'></div>
+				</div>
+			{% else %}
+				{% set ad_counter = ad_counter+1 %}
+			{% endif %}
+		{% endif %}
+		<h4 class='date'><span>{{ row.date_display }}</span></h4>
+		<div class='timeline-content '>
+			{% if (row.headline and not row.text) or (row.photo_type == 'mug') %}
+				<h2>{{ row.headline|process_text() }}</h2>
+			{% endif %}
+			{% if row.photo %}
+			<div class='img-wrapper {{ row.photo_type }}'>
+				<img class='main' src='img/{{ row.photo }}' />
+				<figcaption>
+					{% if row.photo_caption %}
+						{{ row.photo_caption|process_text() }} - 
+					{% endif %}
+					<span class="media-credit">{{ row.photo_credit|process_text(false) }}</span>
+				</figcaption>
+			</div>
+			{% endif %}
+			{% if row.headline and row.text and row.photo_type != 'mug' %}
+				<h2>{{ row.headline|process_text() }}</h2>
+			{% endif %}
+			{% if row.text %}
+				<p>{{ row.text|process_text() }}</p>
+			{% endif %}
+			{% include '_'+row.uniqueID+'.html' ignore missing %}
+			<div class='clearfix'></div>
+			<!-- <a class='btn visible-phone return' href='#intro'>Return to top</a> -->
+		</div>
+	</div>
+{% endfor %}
