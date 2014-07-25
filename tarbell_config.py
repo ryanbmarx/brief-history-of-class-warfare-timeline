@@ -24,7 +24,7 @@ S3_BUCKETS = {
     # Provide target -> s3 url pairs, such as:
     #     "mytarget": "mys3url.bucket.url/some/path"
     # then use tarbell publish mytarget to publish to it
-    "production": "graphics.chicagotribune.com/history-of-class-warfare",
+    "production": "graphics.chicagotribune.com/news/local/history-of-class-warfare",
     "staging": "graphics.beta.tribapps.com/history-of-class-warfare",
 }
 
