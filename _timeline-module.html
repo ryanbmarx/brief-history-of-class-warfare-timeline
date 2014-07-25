@@ -22,7 +22,7 @@
 		{% endif %}
 		<h4 class='date'><span>{{ row.date_display }}</span></h4>
 		<div class='timeline-content {{ row.category }}'>
-			{% if (row.headline and not row.text) or (row.photo_type == 'mug') %}
+			{% if (row.headline and not row.text) or (row.photo_type == 'mug') or (row.photo_type == 'half-right')or (row.photo_type == 'half-left') %}
 				<h2>{{ row.headline|process_text() }}</h2>
 			{% endif %}
 			{% if row.photo %}
@@ -36,7 +36,7 @@
 				</figcaption>
 			</div>
 			{% endif %}
-			{% if row.headline and row.text and row.photo_type != 'mug' %}
+			{% if row.headline and row.text and row.photo_type != 'mug' and row.photo_type != 'half-right' and row.photo_type != 'half-left' %}
 				<h2>{{ row.headline|process_text() }}</h2>
 			{% endif %}
 			{% if row.text %}
