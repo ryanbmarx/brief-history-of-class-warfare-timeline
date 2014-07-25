@@ -233,7 +233,7 @@ i.icon-arrow-up{color: white;left: 5px;}
 
 
 @media (max-width: 768px) {
-	.advert-wrapper.right{float:none; margin: 25px 0;}
+	.advert-wrapper.right{float: none;margin: 25px 0;border-bottom: 1px solid #d0d0d0;padding-bottom: 25px;}
 	.timeline-content{margin:0 auto;}
 	.timeline-wrapper h4.date{
 		text-align: left;

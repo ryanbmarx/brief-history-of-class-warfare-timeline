@@ -10,8 +10,8 @@
 {% for row in timeline[1:] %}
 	<hr>
 	<div id ='{{ row.uniqueID }}' class='timeline-wrapper {{ row.category }}'>
-		{% if row.photo and row.photo_type != 'mug' %}
-			{% if ad_counter >= 2 %}
+		{% if row.photo and row.photo_type != 'mug' and row.photo_type != 'half-right' and row.photo_type != 'half-left' %}
+			{% if ad_counter >= 4 %}
 				{% set ad_counter = 0 %}
 				<div class='advert-wrapper right'>
 					<div class='advert' data-ad-type='cube'></div>

@@ -31,5 +31,5 @@ S3_BUCKETS = {
 # Default template variables
 DEFAULT_CONTEXT = {
     'name': 'history-of-class-warfare',
-    'title': 'A brief history of class warfare'
+    'title': 'Class warfare in Chicago'
 }
