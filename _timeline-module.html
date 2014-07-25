@@ -21,7 +21,7 @@
 			{% endif %}
 		{% endif %}
 		<h4 class='date'><span>{{ row.date_display }}</span></h4>
-		<div class='timeline-content '>
+		<div class='timeline-content {{ row.category }}'>
 			{% if (row.headline and not row.text) or (row.photo_type == 'mug') %}
 				<h2>{{ row.headline|process_text() }}</h2>
 			{% endif %}
