@@ -93,8 +93,33 @@ article p,article h1,article h2,article h3,article h4,article h5,article h6 {max
 	margin: 0 370px 0 auto;
 }
 
+.timeline-box {
+	background-color: #eee;
+	border: 1px solid #bbb;
+	font-style: italic;
+	padding: 15px;
+	clear: both;
+}
+
+.timeline-box p:last-child{
+	margin-bottom: 0;
+}
+
+
 .timeline-content .img-wrapper{
 /*	max-width:400px;*/
+}
+
+.timeline-content .img-wrapper.half-left{
+float:left;
+margin:0 15px 15px 0;
+max-width:40%;
+}
+
+.timeline-content .img-wrapper.half-right{
+float:right;
+margin:0 0 15px 15px;
+max-width:40%;
 }
 
 .timeline-content .img-wrapper.mug{
