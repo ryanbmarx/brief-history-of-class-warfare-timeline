@@ -42,6 +42,11 @@
 			{% if row.text %}
 				<p>{{ row.text|process_text() }}</p>
 			{% endif %}
+			{% if row.info_box %}
+				<div class='timeline-box'>
+					<p>{{ row.info_box|process_text() }}</p>
+				</div>
+			{% endif %}
 			{% include '_'+row.uniqueID+'.html' ignore missing %}
 			<div class='clearfix'></div>
 			<!-- <a class='btn visible-phone return' href='#intro'>Return to top</a> -->
