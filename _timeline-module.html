@@ -1,4 +1,6 @@
-{% set ad_counter = 4 %}
+{% set ad_counter = ad_counter_number|int %}
+
+
 <div id='return-wrapper' class='visible-phone'>
 	<a href='#intro' class='return'>
 		<span class='icon-stack'>
@@ -14,8 +16,8 @@
 			<span></span>
 			<h4>{{ row.date_display }}</span></h4>
 		</div>
-		{% if row.photo and row.photo_type != 'mug' and row.photo_type != 'half-right' and row.photo_type != 'half-left' %}
-			{% if ad_counter >= 4 %}
+		{% if row.photo and row.photo_type != 'mug'  %}
+			{% if ad_counter >= ad_counter_number|int %}
 				{% set ad_counter = 0 %}
 				<div class='advert-wrapper right'>
 					<div class='advert' data-ad-type='cube'></div>
