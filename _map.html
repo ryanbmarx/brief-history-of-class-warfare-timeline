@@ -5,8 +5,11 @@
 		console.log( "ready!" );
 		var coordinates = '{{ row.coordinates }}';
 		var coordinates_arr=coordinates.split(",");
+		// if ((coordinates_arr[2]>16) or (coordinates_arr[2]<10) or (isNaN(coordinates_arr[2]){
+		// 	coordinates_arr[2]=14;
+		// }
 		// Make new leaflet map
-		var map = L.map('{{row.uniqueID}}-map').setView([coordinates_arr[0], coordinates_arr[1]], 14);
+		var map = L.map('{{row.uniqueID}}-map').setView([coordinates_arr[0], coordinates_arr[1]], coordinates_arr[2]);
 
 		// City map tiles
 		L.tileLayer(
