@@ -37,8 +37,20 @@
 		</section>
 		<div class='credits'>
 			<p>{{ sources }}</p>
+			{% if is_there_a_credits_box|upper == 'FALSE'%}
 			<p>{{ credits }}</p>
+			{% endif %}
 		</div>
+		{% if is_there_a_credits_box|upper == 'TRUE'%}
+		<div class="credits-wrapper">
+			<div class="credits-inner">
+				{% for row in credits %}
+				<p>{{ row.role }} <span>{{ row.names }}</span></p>
+				{% endfor %}
+			</div>
+		</div>  		
+
+		{% endif %}
 		{% include '_facebook_comments.html' %}
 	</article>
 </div>

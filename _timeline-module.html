@@ -32,7 +32,7 @@
 			{% endif %}
 			{% if row.photo %}
 			<div class='img-wrapper {{ row.photo_type }}'>
-				<img class='main' src='img/{{ row.photo }}' />
+				<img class='main' src='img/{{ row.photo|lower }}' />
 				<figcaption>
 					{% if row.photo_caption %}
 						{{ row.photo_caption|process_text() }} - 

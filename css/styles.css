@@ -7,13 +7,13 @@ article p,article h1,article h2,article h3,article h4,article h5,article h6 {max
 
 /* advert wrapper */
 .advert-wrapper {margin-top:39px;margin-bottom:25px;}
-
 .right{float:right;margin:0px 0;}
 
 /* limit content to a 768px, horizontally centered grouping */
 .constrained768{max-width:768px;margin:0 auto;}
 
 .credits{margin-top:25px;}
+.credits-inner p{margin-bottom:5px;}
 #intro br, hr{display:none;}
 #intro h1{font-size:60px;}
 
