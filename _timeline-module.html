@@ -11,7 +11,7 @@
 </div>
 {% for row in timeline[1:] %}
 	<hr>
-	<div id ='{{ row.uniqueID }}' class='timeline-wrapper {{ row.category }}'>
+	<div id ='{{ row.uniqueID }}' class='timeline-wrapper {{ row.category|lower }}'>
 		<div class='date'>
 			<span></span>
 			<h4>{{ row.date_display }}</span></h4>
@@ -28,7 +28,7 @@
 		{% endif %}
 		
 
- 		<div class='timeline-content {{ row.category }}'>
+ 		<div class='timeline-content'>
 			{% if (row.headline and not row.text) or (row.photo_type == 'mug') or (row.photo_type == 'half-right')or (row.photo_type == 'half-left') %}
 				<h2>{{ row.headline|process_text() }}</h2>
 			{% endif %}
