@@ -10,6 +10,10 @@
 {% for row in timeline[1:] %}
 	<hr>
 	<div id ='{{ row.uniqueID }}' class='timeline-wrapper {{ row.category }}'>
+		<div class='date'>
+			<span></span>
+			<h4>{{ row.date_display }}</span></h4>
+		</div>
 		{% if row.photo and row.photo_type != 'mug' and row.photo_type != 'half-right' and row.photo_type != 'half-left' %}
 			{% if ad_counter >= 4 %}
 				{% set ad_counter = 0 %}
@@ -20,8 +24,9 @@
 				{% set ad_counter = ad_counter+1 %}
 			{% endif %}
 		{% endif %}
-		<h4 class='date'><span>{{ row.date_display }}</span></h4>
-		<div class='timeline-content {{ row.category }}'>
+		
+
+ 		<div class='timeline-content {{ row.category }}'>
 			{% if (row.headline and not row.text) or (row.photo_type == 'mug') or (row.photo_type == 'half-right')or (row.photo_type == 'half-left') %}
 				<h2>{{ row.headline|process_text() }}</h2>
 			{% endif %}
