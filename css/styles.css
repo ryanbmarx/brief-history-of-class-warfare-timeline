@@ -17,12 +17,17 @@ article p,article h1,article h2,article h3,article h4,article h5,article h6 {max
 #intro br, hr{display:none;}
 #intro h1{font-size:60px;}
 
+/* ADD-IN NGUX UNTIl IT'S NATIVE */
+article p {color: #666;font-size: 18px;line-height: 27px;margin-bottom: 18px;position: relative;white-space: normal;}
+ul p, ol p{font-size: 16px}
 
 /*TIMELINE STYLES*/
 .timeline-wrapper{padding: 25px;}
 .timeline-wrapper .date{margin: 25px 0 15px 0;text-align:left;position:relative;}
 .timeline-wrapper .date h4 {font-weight: bold;font-family: 'Arial', sans-serif;font-size: 20px;border: 1px solid #888;border-top:none;border-bottom:none;display: inline-block;margin:0 0 0 25px;padding: 5px 10px;background-color: #fbfcfc;position:inherit;}
 .timeline-wrapper .date span{border-top: 1px solid #888;display: block;position: absolute;width: 100%;top: 46%;}
+.timeline-content p{font-size: 16px; line-height: 1.4em;}
+
 
 /*TIMELINE HIGHLIGHT OPTIONS*/
 .timeline-wrapper.yellow {background-color: #FFDB58;}
@@ -37,9 +42,11 @@ article p,article h1,article h2,article h3,article h4,article h5,article h6 {max
 
 .timeline-wrapper hr{border-top:1px solid #888;}
 .timeline-content{max-width:600px;margin: 0 370px 0 auto;}
+
 /* INFO BOX*/
 .timeline-box {background-color: #eee;border: 1px solid #bbb;font-style: italic;padding: 15px;clear: both;}
 .timeline-box p:last-child{margin-bottom: 0;}
+
 /* PHOTO STYLES/OPTIONS */
 .timeline-content .img-wrapper.half-left{float:left;margin:0 15px 15px 0;max-width:40%;}
 .timeline-content .img-wrapper.half-right{float:right;margin:0 0 15px 15px;max-width:40%;}
@@ -47,10 +54,8 @@ article p,article h1,article h2,article h3,article h4,article h5,article h6 {max
 .timeline-content .img-wrapper img{width:100%;}
 
 /*TIMELINE DOT-NAV STYLES*/
-
 .dot.yellow{background-color:#FFDB58; opacity:.55;}
 .dot.blue{background-color:#549AC4; opacity:.55;}
-
 .dot-bar-wrapper{box-shadow: 0 3px 3px rgba(0,0,0,.45);width: 100%;height: 20px;background-color: #0d1123;top: 40px;left: 0;border-bottom: 1px solid #0d1123;z-index: 2000;position: fixed;border-top: 1px solid white;padding-top: 9px;}
 .dot-bar-wrapper .year{float:left;width: 10%;text-align:right;}
 .dot-bar-wrapper .container-fluid .dot-bar{float:left;width: 80%;height:20px;position:relative;padding-right:0px;}
@@ -61,7 +66,6 @@ article p,article h1,article h2,article h3,article h4,article h5,article h6 {max
 .active, .dot:hover,.dot.yellow.active,.dot.blue.active{opacity:1;}
 .tooltip-inner{font-family:'Arial', sans-serif;font-weight:bold;}
 
-
 /* RETURN BUTTON CSS */
 #return-wrapper{position:fixed;bottom: 30px;right: 50px;}
 a.return{position:relative;}
@@ -70,6 +74,10 @@ a.return i{position:absolute;}
 i.icon-circle{opacity:.8}
 i.icon-arrow-up{color: white;left: 5px;}
 
+/* LATEST BOX */
+#latest-box h4{margin-bottom:10px;font-size: 20px;}
+#latest-box p, #latest-box a{color: #000;font-size:14px;margin:0;line-height:1.5em;}
+
 /* for maps */
 .timeline-map{width:100%;height:300px;border:1px solid #888;clear:both;margin-bottom: 25px;}
 
@@ -77,9 +85,7 @@ i.icon-arrow-up{color: white;left: 5px;}
 @media (max-width: 1024px) {
 	.timeline-wrapper .date{margin: 45px 0 25px 0;text-align:center;}
 	.timeline-wrapper .date h4{margin-left:0;}
-
 }
-
 
 @media (max-width: 1000px) {
 	.dot-bar-wrapper{top:0;;border-top:0;padding:0 0 8px 0;}
@@ -87,8 +93,8 @@ i.icon-arrow-up{color: white;left: 5px;}
 	.navbar-fixed-top {margin-top: 29px; border-top: 1px solid white}
 }
 
-
 @media (max-width: 768px) {
+	#latest-box .row-fluid div{min-height:0;margin-bottom: 15px;}
 	.timeline-wrapper{padding: 15px;}
 	.advert-wrapper.right{float: none;margin: 25px 0;}
 	.timeline-content{margin:0 auto;}

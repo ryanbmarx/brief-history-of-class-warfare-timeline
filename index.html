@@ -29,7 +29,32 @@
 	<article>
 		<section id='intro'>
 			<h1>{{ headline|process_text() }}</h1>
+			{% if show_latest_info_box|lower == "show" %}
+			<div class='row-fluid'>
+				<div class='span4'>
+					<p>{{ chatter|process_text() }}</p>
+				</div>
+				<div class='span8'>
+					<div id='latest-box' class="alert">
+						<h4>The latest news</h4>
+							<div class='row-fluid'>
+								{% for row in timeline[::-1]  %}
+								{% if loop.index < 4 %}
+								<div class='span4'>
+									<a href='#{{row.uniqueID}}'>
+										<p><em>{{ row.date_display }}</em></p>
+										<p><strong>{{ row.headline }}</strong></p>
+									</a>
+								</div>
+								{% endif %}
+								{% endfor %}
+							</div>
+					</div>
+				</div>
+			</div>
+			{% else %}
 			<p>{{ chatter|process_text() }}</p>
+			{% endif %}
 			<div class='clearfix'></div>
 		</section>
 		<section id='timeline' >
